@@ -20,6 +20,7 @@ export function doStuff(){
 }
 
 export async function getSessionsFrom(sessionCipher: SessionCipher): Promise<SessionType[]> {
+    //@ts-ignore
     let sessionRecord = await sessionCipher.getRecordPublic(); 
     if (sessionRecord === undefined){
         return []
